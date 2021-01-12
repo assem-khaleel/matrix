@@ -48,7 +48,7 @@ class MatrixController extends Controller
          //number of columns in first matrix must be equal to number of rows in second matrix 
          if ($col1 != $row2) {  
             return response()->json([
-                   'error' => "Matrices cannot be multiplied",
+                   'error' => "Matrices cannot be multiplied",422,
             ]);
          } else { 
           
