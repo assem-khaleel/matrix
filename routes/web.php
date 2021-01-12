@@ -14,3 +14,13 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+// Matrix Route to calculate Matrices Multiplication
+$router->get('matrix', [
+    'uses' => 'MatrixController@matrixMultiplication'
+]);
+
+// Generate Random App Key
+$router->get('/key', function() {
+    return \Illuminate\Support\Str::random(32);
+});
